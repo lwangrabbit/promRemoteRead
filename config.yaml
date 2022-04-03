@@ -1,0 +1,2 @@
+remote_read:
+  - url: http://10.21.1.74:8086/api/v1/prom/read?db=prometheus
