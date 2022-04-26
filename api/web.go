@@ -9,8 +9,9 @@ import (
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/prometheus/common/route"
-	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/storage"
+
+	"github.com/lwangrabbit/promRemoteRead/promql"
+	"github.com/lwangrabbit/promRemoteRead/storage"
 )
 
 type Handler struct {

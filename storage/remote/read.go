@@ -3,8 +3,8 @@ package remote
 import (
 	"context"
 
-	"github.com/prometheus/prometheus/pkg/labels"
-	"github.com/prometheus/prometheus/storage"
+	"github.com/lwangrabbit/promRemoteRead/pkg/labels"
+	"github.com/lwangrabbit/promRemoteRead/storage"
 )
 
 // QueryableClient returns a storage.Queryable which queries the given

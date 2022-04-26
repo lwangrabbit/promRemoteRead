@@ -15,10 +15,10 @@ import (
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/common/promlog"
-	"github.com/prometheus/prometheus/promql"
 
 	"github.com/lwangrabbit/promRemoteRead/api"
 	"github.com/lwangrabbit/promRemoteRead/config"
+	"github.com/lwangrabbit/promRemoteRead/promql"
 	"github.com/lwangrabbit/promRemoteRead/storage/remote"
 )
 

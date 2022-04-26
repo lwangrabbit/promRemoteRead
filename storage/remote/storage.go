@@ -5,10 +5,10 @@ import (
 	"sync"
 
 	"github.com/prometheus/common/model"
-	"github.com/prometheus/prometheus/pkg/labels"
-	"github.com/prometheus/prometheus/storage"
 
 	"github.com/lwangrabbit/promRemoteRead/config"
+	"github.com/lwangrabbit/promRemoteRead/pkg/labels"
+	"github.com/lwangrabbit/promRemoteRead/storage"
 )
 
 type Storage struct {

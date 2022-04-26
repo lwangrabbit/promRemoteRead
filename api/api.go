@@ -14,11 +14,12 @@ import (
 	"github.com/pkg/errors"
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/common/route"
-	"github.com/prometheus/prometheus/pkg/gate"
-	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/util/httputil"
-	"github.com/prometheus/prometheus/util/stats"
+
+	"github.com/lwangrabbit/promRemoteRead/pkg/gate"
+	"github.com/lwangrabbit/promRemoteRead/promql"
+	"github.com/lwangrabbit/promRemoteRead/storage"
+	"github.com/lwangrabbit/promRemoteRead/util/httputil"
+	"github.com/lwangrabbit/promRemoteRead/util/stats"
 )
 
 type status string

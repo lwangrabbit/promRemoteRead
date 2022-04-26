@@ -5,9 +5,10 @@ import (
 	"sort"
 
 	"github.com/prometheus/common/model"
-	"github.com/prometheus/prometheus/pkg/labels"
-	"github.com/prometheus/prometheus/prompb"
-	"github.com/prometheus/prometheus/storage"
+
+	"github.com/lwangrabbit/promRemoteRead/pkg/labels"
+	"github.com/lwangrabbit/promRemoteRead/prompb"
+	"github.com/lwangrabbit/promRemoteRead/storage"
 )
 
 // ToQuery builds a Query proto.

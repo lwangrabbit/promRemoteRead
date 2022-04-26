@@ -4,9 +4,11 @@ import (
 	"bufio"
 	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"time"
 
@@ -14,8 +16,9 @@ import (
 	"github.com/golang/snappy"
 	config_util "github.com/prometheus/common/config"
 	"github.com/prometheus/common/model"
-	"github.com/prometheus/prometheus/prompb"
 	"golang.org/x/net/context/ctxhttp"
+
+	"github.com/lwangrabbit/promRemoteRead/prompb"
 )
 
 const maxErrMsgLen = 256
@@ -158,6 +161,10 @@ func (c *Client) Read(ctx context.Context, query *prompb.Query) (*prompb.QueryRe
 	if len(resp.Results) != len(req.Queries) {
 		return nil, fmt.Errorf("responses: want %d, got %d", len(req.Queries), len(resp.Results))
 	}
+
+	reqbs, _ := json.Marshal(req)
+	rspbs, _ := json.Marshal(resp)
+	log.Printf("TEST: POST: %v, request: %v, response: %v \r\n", c.url.String(), string(reqbs), string(rspbs))
 
 	return resp.Results[0], nil
 }
